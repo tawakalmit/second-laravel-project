@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @vite('resources/css/app.css')
   <link rel="stylesheet" href="style.css">
+  <title>Homepage</title>
 </head>
 <body>
   
@@ -54,14 +55,15 @@
 </section>
 
 <section class="flex flex-col w-8/12 mb-20 mx-auto mt-60 md:flex-row justify-around flex-wrap">
-<div class="mb-20 md:mb-40">
-    <img src="shutterstock_2140004723.png" alt="alt" class="rounded-t-xl w-72">
-    <img src="/Group 3917.png" alt="alt" class="w-72">
-    <img src="/Group 3832.svg" alt="alt" class="mx-auto -mt-[17rem] w-24">
-    <p class="mt-5 w-64 text-sm text-center mx-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cumque pariatur voluptatum similique architecto porro, distinctio magni.</p>
-    <p class="text-center text-lg font-bold mt-5">Name</p>
-    <p class="text-center text-md opacity-50 -mt-1">Job Description</p>
-</div>
+
+  @foreach($card as $info)
+  <x-group-card>
+  <x-slot name="description">{{ $info->description }}</x-slot>
+  <x-slot name="name">{{ $info->name }}</x-slot>
+  <x-slot name="job">{{ $info->job }}</x-slot>
+  </x-group-card>
+  @endforeach
+
 </section>
 
 <section class="w-full h-[55rem] pattern">
