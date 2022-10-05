@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CardController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+
+Route::get('card', [CardController::class, 'index'])->name('card.index');
+Route::post('card', [CardController::class, 'store'])->name('card.store');
+Route::get('card/{id}/edit', [CardController::class, 'edit'])->name('card.edit');
+Route::put('card/{id}', [CardController::class, 'update'])->name('card.update');
+Route::delete('card/{id}', [CardController::class, 'destroy'])->name('card.destroy');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
