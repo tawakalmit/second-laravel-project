@@ -25,11 +25,43 @@
       <div>
         <p class="font-bold">ID | EN</p>
       </div>
-      <img src="/Group3.svg" alt="burger-icon">
+      <img src="/Group3.svg" alt="burger-icon" id="burger" class="cursor-pointer">
     </div>
   </div>
 </nav>
 
+    <div class="exist w-full md:w-6/12 h-full p-4 overflow-y-auto bg-gradient-to-b from-[#E30A17] to-[#A5030E] text-base-content" id="sidebar">
+      <div class="cursor-pointer w-11/12 flex justify-end mt-5">
+        <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+        <label for="my-drawer-4" class="text-white font-bold text-4xl cursor-pointer" id="x">X</label>
+      </div>
+
+      <div class="w-10/12 mt-5 justify-end flex items-center">
+        <div class="w-fit h-10 bg-white rounded-full mr-10 flex items-center">
+          <a href="{{ route('register') }}" class="py-2 px-4 text-[#DD0A16] font-bold">Register/Login</a>
+        </div>
+        <label class="swap">
+          <input type="checkbox" class="opacity-0" />
+          <div class="swap-on text-white">ID</div>
+          <div class="swap-off text-white">EN</div>
+        </label>
+      </div>
+
+      <div class="flex justify-end w-10/12 mt-5">
+        <input type="text" class="w-80 border-b-2 mr-4 bg-[rgba(20,20,20,0)]">
+        <img src="/Group1.svg" alt="search-icon" class="w-5 fill-white">
+      </div>
+
+      <div class="w-10/12 mt-5 flex flex-col">
+        <a href="" data-localize="Produk" class="text-white text-right text-xl mb-3">Product</a>
+        <a href="" data-localize="Promo" class="text-white text-right text-xl mb-3">Promo</a>
+        <a href="" data-localize="Layanan" class="text-white text-right text-xl mb-3">Services</a>
+        <a href="" class="text-white text-right text-xl mb-3">FAQ</a>
+        <a href="" data-localize="Karir" class="text-white text-right text-xl mb-3">Career</a>
+        <a href="" data-localize="Hubungi Kami" class="text-white text-right text-xl mb-3">Contact Us</a>
+      </div>
+    </div>
+<div class="" id="faded"></div>
 <img src="/Group3914.png" alt="jumbotron" class="mt-3 md:-mt-20">
 
 <section class="w-full mt-10 pb-10 md:-mt-72 md:pb-0">
@@ -255,5 +287,6 @@
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

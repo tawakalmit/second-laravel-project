@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 class CardController extends Controller
 {
     public function index(){
-        $card = DB::table('card')->get();
+        $card = Card::all();
         return view('card', compact('card'));
     }
 
@@ -33,8 +33,8 @@ class CardController extends Controller
     }
 
     public function edit($id){
-        $card = DB::table('card')->where('id', $id)->first();
-        return view ('cardedit', ['card' => $card]);
+        $card = Card::find($id);
+        return view ('cardedit', compact('card'));
     }
 
     public function update(Request $request, $id){
