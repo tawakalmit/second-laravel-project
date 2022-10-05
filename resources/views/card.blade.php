@@ -1,7 +1,13 @@
 <x-app-layout>
 
     <x-slot name="title">Card</x-slot>
-    <x-slot name="header"></x-slot>
+    <x-slot name="header">
+    @if (session('status'))
+        <div class="alert alert-success">
+            <p class="text-center">{{ session('status') }}</p>
+        </div>
+    @endif
+    </x-slot>
 
     <div class="w-10/12 h-[32rem] mx-auto flex justify-between">
         <form method="post" enctype="multipart/form-data" class="w-10/12 md:w-[20rem] mx-auto bg-[#2c3e50] mt-10 flex items-center flex-col rounded-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 shadow-2xl">

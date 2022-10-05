@@ -4,7 +4,7 @@
 
     <x-slot name="header"></x-slot>
 
-    <form action="/card/{{ $card->id }}" method="post" class="w-10/12 md:w-3/12 mx-auto bg-[#2c3e50] mt-10 flex items-center flex-col rounded-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 shadow-2xl">
+    <form action="/card/{{ $card->id }}" enctype="multipart/form-data" method="post" class="w-10/12 md:w-3/12 mx-auto bg-[#2c3e50] mt-10 flex items-center flex-col rounded-xl bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 shadow-2xl">
         
         @method('put')
     
@@ -24,6 +24,13 @@
             <label for="description" class="text-white">Description</label>
             <input type="text" placeholder="Type here" id="description" name="description" class="input w-full" value="{{ $card->description }}" />
         </div>
+
+        <div class="w-10/12 mx-auto p-3">
+            <label for="image" class="text-white">Upload Image</label>
+            <input type="file" id="image" name="image" class="form-control w-60" accept="image/*" value="{{ $card->image }}" />
+        </div>
+
+
 
         <button type="submit" class="btn glass m-5">Update</button>
 

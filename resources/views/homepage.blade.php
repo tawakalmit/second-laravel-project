@@ -58,6 +58,7 @@
 
   @foreach($card as $info)
   <x-group-card>
+  <x-slot name="image">{{ $info->image }}</x-slot>
   <x-slot name="description">{{ $info->description }}</x-slot>
   <x-slot name="name">{{ $info->name }}</x-slot>
   <x-slot name="job">{{ $info->job }}</x-slot>
