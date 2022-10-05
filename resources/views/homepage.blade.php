@@ -12,20 +12,20 @@
 <nav class="absolute -top-10 md:relative md:top-0 pt-[52px] w-full h-[53px] items-center">
   <div class="w-11/12 h-fit flex mx-auto items-center justify-between">
     <img src="/Group2.png" alt="logo" class="mt-2 w-60 md:mt-0 md:w-80">
-    <div class="hidden md:flex justify-between w-7/12">
-      <div class="flex">
+    <div class="md:flex justify-between w-7/12">
+      <div class="hidden md:flex">
         <div class="border-b-2 mr-3">
         <input type="text" class="w-80 input">
         </div>
         <img src="/Group1.svg" alt="search-icon" class="w-5">
       </div>
-      <div class="bg-[#DD0A16] rounded-full flex items-center">
+      <div class="hidden bg-[#DD0A16] rounded-full md:flex items-center">
         <a href="{{ route('register') }}" class="text-center text-white px-5 py-1">Register/login</a>
       </div>
-      <div>
+      <div class="hidden md:flex">
         <p class="font-bold">ID | EN</p>
       </div>
-      <img src="/Group3.svg" alt="burger-icon" id="burger" class="cursor-pointer">
+      <img src="/Group3.svg" alt="burger-icon" id="burger" class="cursor-pointer absolute top-13 right-10 md:static">
     </div>
   </div>
 </nav>
@@ -78,12 +78,12 @@
   <img src="/Subtraction1.png" alt="subtrack" class="hidden md:block">
 
   <div class="w-full md:w-10/12 flex flex-col md:flex-row md:flex mx-auto justify-around mt-40 items-center md:-mt-[30rem]">
-    <div class="w-64 h-[22rem] mb-5 flex flex-col items-center p-5 border-4 rounded-xl border-[#DA1222]">
-      <img src="/Group14.svg" alt="speaker" class="w-24 mb-10">
-      <h2 class="text-2xl text-[#DA1222] font-bold mb-3">Judul</h2>
-      <p class="text-center text-[#DA1222]">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error placeat esse nobis provident aut repellat minima </p>
-    </div>
+  <x-smallcontainer></x-smallcontainer>
+  <x-smallcontainer></x-smallcontainer>
+  <x-smallcontainer></x-smallcontainer>
+  <x-smallcontainer></x-smallcontainer>
   </div>
+  
 </section>
 
 <section class="flex flex-col w-8/12 mb-20 mx-auto mt-60 md:flex-row justify-around flex-wrap">
