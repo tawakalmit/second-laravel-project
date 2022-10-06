@@ -38,16 +38,21 @@ class CardController extends Controller
     }
 
     public function update(Request $request, $id){
-        $file = $request->file('image');
-        $filename = $file->getClientOriginalName();
-        $file->storeAs('image', $filename);
 
         $card = Card::find($id);
  
         $card->name = $request->name;
         $card->job = $request->job;
         $card->description = $request->description;
-        $card->image = $request->file('image')->getClientOriginalName();
+
+        if(file_exists($request->file('image'))){
+            $file = $request->file('image');
+            $filename = $file->getClientOriginalName();
+            $file->storeAs('image', $filename);
+            $card->image = $request->file('image')->getClientOriginalName();
+        } else {
+
+        }
 
         
         $card->save();

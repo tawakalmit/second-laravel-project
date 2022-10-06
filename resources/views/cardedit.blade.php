@@ -26,8 +26,9 @@
         </div>
 
         <div class="w-10/12 mx-auto p-3">
-            <label for="image" class="text-white">Upload Image</label>
-            <input type="file" id="image" name="image" class="form-control w-60" accept="image/*" value="{{ $card->image }}" required />
+            <label for="image" class="text-white">Change Image</label>
+            <img src="/storage/image/{{ $card->image }}" alt="image" class="rounded-xl mb-3">
+            <input type="file" id="image" name="image" class="form-control w-60" accept="image/*" value="{{ $card->image }}" />
         </div>
 
 
